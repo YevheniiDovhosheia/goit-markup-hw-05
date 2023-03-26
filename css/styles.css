@@ -479,9 +479,21 @@ img {
   transition: color 250ms;
 }
 .cover-text {
+  color: var(--logo-bot);
+}
+.wrap-example {
+  position: relative;
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wrap-example:hover,
+.wrap-example:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.overlay {
   position: absolute;
   top: 0;
-  color: var(--logo-bot);
   background-color: var(--logo);
   padding-top: 40px;
   padding-left: 32px;
@@ -491,14 +503,9 @@ img {
   transition: transform 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wrap-example {
-  display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.wrap-example:hover,
-.wrap-example:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.wrap-example:hover .overlay,
+.wrap-example:focus .overlay {
+  transform: translateY(0);
 }
 .nav-but {
   font-family: "Roboto", sans-serif;
